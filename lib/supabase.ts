@@ -26,7 +26,7 @@ function getSupabase() {
 }
 
 // Singleton — dibuat sekali saat pertama kali dipakai
-let _supabase: ReturnType<typeof createClient> | null = null;
+let _supabase: ReturnType<typeof getSupabase> | null = null;
 
 export function getSupabaseClient() {
   if (!_supabase) {
