@@ -1,0 +1,127 @@
+/* app/components/persyaratanDokumen/PersyaratanDokumen.module.scss */
+@use "../../styles/responsive" as r;
+
+.section {
+  background: linear-gradient(135deg,
+      rgba(42, 157, 143, 0.06) 0%,
+      rgba(247, 248, 250, 1) 55%,
+      rgba(231, 111, 81, 0.05) 100%);
+  border-bottom: 0.1rem solid var(--color-border);
+}
+
+.inner {
+  @include r.container;
+  padding-block: 2.8rem;
+
+  @include r.up(lg) {
+    padding-block: 3.6rem;
+  }
+}
+
+.header {
+  max-width: 76rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+
+  @include r.up(lg) {
+    font-size: 2.6rem;
+  }
+}
+
+.subtitle {
+  margin: 0.8rem 0 0 0;
+  font-size: 1.45rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.card {
+  margin-top: 1.6rem;
+  padding: 1.6rem;
+  border-radius: 2.2rem;
+
+  border: 0.1rem solid var(--color-border);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-sm);
+
+  @include r.up(lg) {
+    padding: 2.0rem;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 0.9rem;
+
+  @include r.up(md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.0rem;
+  }
+}
+
+.item {
+  display: flex;
+  gap: 1.0rem;
+  align-items: flex-start;
+
+  padding: 1.2rem 1.2rem;
+  border-radius: 1.8rem;
+
+  border: 0.1rem solid var(--color-border);
+  background: rgba(42, 157, 143, 0.05);
+
+  &:hover {
+    border-color: rgba(42, 157, 143, 0.28);
+  }
+}
+
+.icon {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 1.6rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.1rem solid var(--color-border);
+  background: rgba(231, 111, 81, 0.08);
+  color: var(--color-text);
+
+  flex: 0 0 auto;
+}
+
+.body {
+  min-width: 0;
+}
+
+.label {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 950;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.note {
+  margin: 0.45rem 0 0 0;
+  font-size: 1.3rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+.footnote {
+  margin: 1.2rem 0 0 0;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}

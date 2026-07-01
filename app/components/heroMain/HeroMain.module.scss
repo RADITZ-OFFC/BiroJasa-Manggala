@@ -1,0 +1,213 @@
+/* app/components/heroMain/HeroMain.module.scss */
+@use "../../styles/responsive" as r;
+
+.hero {
+  position: relative;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20rem -20rem auto -20rem;
+  height: 36rem;
+  background: radial-gradient(60% 60% at 30% 40%,
+      rgba(42, 157, 143, 0.18),
+      rgba(42, 157, 143, 0.00));
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -20rem -22rem -20rem;
+  height: 42rem;
+  background: radial-gradient(55% 55% at 70% 40%,
+      rgba(231, 111, 81, 0.16),
+      rgba(231, 111, 81, 0.00));
+  pointer-events: none;
+}
+
+.inner {
+  @include r.container;
+  position: relative;
+  z-index: 1;
+
+  padding-block: 3.2rem;
+  display: grid;
+  gap: 2.4rem;
+
+  @include r.up(lg) {
+    padding-block: 4.8rem;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 3.2rem;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.eyebrow {
+  margin: 0;
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.6rem 1.0rem;
+  border-radius: 999rem;
+  border: 0.1rem solid var(--color-border);
+  background: rgba(255, 255, 255, 0.7);
+
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--color-primary-dark);
+}
+
+.h1 {
+  margin: 0;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+
+  @include r.up(lg) {
+    font-size: 4.2rem;
+  }
+}
+
+.subHeading {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+
+  @include r.up(lg) {
+    font-size: 2.0rem;
+  }
+}
+
+.desc {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+
+  strong {
+    color: var(--color-text);
+    font-weight: 900;
+  }
+
+  @include r.up(lg) {
+    font-size: 1.6rem;
+  }
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.0rem;
+  margin-top: 0.6rem;
+
+  @include r.up(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  width: 100%;
+  justify-content: center;
+
+  @include r.up(md) {
+    width: auto;
+    justify-content: flex-start;
+  }
+}
+
+.ctaSecondary {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.points {
+  list-style: none;
+  margin: 0.6rem 0 0 0;
+  padding: 0;
+
+  display: grid;
+  gap: 0.9rem;
+
+  @include r.up(md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.0rem;
+
+  padding: 1.2rem 1.2rem;
+  border-radius: 1.6rem;
+  border: 0.1rem solid var(--color-border);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-sm);
+}
+
+.pointIcon {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 1.2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.1rem solid var(--color-border);
+  background: rgba(42, 157, 143, 0.08);
+  color: var(--color-text);
+  flex: 0 0 auto;
+}
+
+.pointText {
+  font-size: 1.4rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+
+  strong {
+    color: var(--color-text);
+    font-weight: 900;
+  }
+}
+
+/* RIGHT IMAGE */
+.right {
+  display: flex;
+  justify-content: center;
+
+  @include r.up(lg) {
+    justify-content: flex-end;
+  }
+}
+
+.imageWrap {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}

@@ -1,0 +1,134 @@
+/* app/components/ctaClosingService/CtaClosingService.module.scss */
+@use "../../styles/responsive" as r;
+
+.section {
+  background: linear-gradient(135deg,
+      rgba(231, 111, 81, 0.10) 0%,
+      rgba(247, 248, 250, 1) 40%,
+      rgba(42, 157, 143, 0.12) 100%);
+  border-bottom: 0.1rem solid var(--color-border);
+}
+
+.inner {
+  @include r.container;
+  padding-block: 3.0rem;
+
+  @include r.up(lg) {
+    padding-block: 4.2rem;
+  }
+}
+
+.card {
+  border-radius: 2.6rem;
+  border: 0.1rem solid var(--color-border);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-md);
+
+  padding: 2.0rem;
+  display: grid;
+  gap: 1.6rem;
+
+  @include r.up(lg) {
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: center;
+    padding: 2.4rem;
+    gap: 2.0rem;
+  }
+}
+
+.left {
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.3rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+
+  @include r.up(lg) {
+    font-size: 2.8rem;
+  }
+}
+
+.subtitle {
+  margin: 0.9rem 0 0 0;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.bullets {
+  margin: 1.4rem 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  gap: 0.8rem;
+
+  @include r.up(md) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+}
+
+.bullet {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+
+  padding: 1.1rem 1.2rem;
+  border-radius: 1.8rem;
+  border: 0.1rem solid var(--color-border);
+  background: rgba(42, 157, 143, 0.06);
+}
+
+.bulletIcon {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 1.2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.1rem solid var(--color-border);
+  background: rgba(231, 111, 81, 0.10);
+  color: var(--color-text);
+
+  flex: 0 0 auto;
+}
+
+.bulletText {
+  font-size: 1.35rem;
+  line-height: 1.55;
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.0rem;
+
+  @include r.up(lg) {
+    align-items: stretch;
+  }
+}
+
+.primary,
+.secondary {
+  width: 100% !important;
+  justify-content: center;
+}
+
+.secondary {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.note {
+  margin: 0.4rem 0 0 0;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}

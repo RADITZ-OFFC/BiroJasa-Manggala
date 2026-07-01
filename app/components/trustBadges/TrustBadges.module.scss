@@ -1,0 +1,145 @@
+/* app/components/trustBadges/TrustBadges.module.scss */
+@use "../../styles/responsive" as r;
+
+.section {
+  background: var(--color-bg);
+}
+
+.inner {
+  @include r.container;
+  padding-block: 3.2rem;
+
+  @include r.up(lg) {
+    padding-block: 4.8rem;
+  }
+}
+
+.header {
+  max-width: 72rem;
+}
+
+.title {
+  margin: 0 0 0.8rem 0;
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+
+  @include r.up(lg) {
+    font-size: 2.8rem;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+
+  strong {
+    color: var(--color-text);
+    font-weight: 900;
+  }
+}
+
+/* ===== Assurance cards only ===== */
+.assurances {
+  margin-top: 2.0rem;
+  display: grid;
+  gap: 1.2rem;
+
+  @include r.up(md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.assuranceCard {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.6rem;
+
+  border-radius: 1.8rem;
+  border: 0.1rem solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.assuranceIcon {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 1.4rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.1rem solid var(--color-border);
+  background: rgba(231, 111, 81, 0.08);
+  color: var(--color-text);
+  flex: 0 0 auto;
+}
+
+.assuranceBody {
+  min-width: 0;
+}
+
+.assuranceTitle {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 950;
+  letter-spacing: -0.01em;
+}
+
+.assuranceDesc {
+  margin: 0.4rem 0 0 0;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ===== Helper row ===== */
+.helper {
+  margin-top: 2.0rem;
+  padding: 1.6rem;
+
+  border-radius: 1.8rem;
+  border: 0.1rem solid var(--color-border);
+  background: rgba(42, 157, 143, 0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+
+  @include r.down(lg) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.helperText {
+  margin: 0;
+  font-size: 1.45rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.helperLink {
+  font-weight: 950;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+
+  padding: 0.8rem 1.2rem;
+  border-radius: 1.2rem;
+  border: 0.1rem solid rgba(42, 157, 143, 0.25);
+  background: rgba(255, 255, 255, 0.7);
+
+  &:hover {
+    text-decoration: none;
+    border-color: rgba(42, 157, 143, 0.45);
+  }
+
+  &:focus-visible {
+    box-shadow: var(--focus-ring);
+  }
+}

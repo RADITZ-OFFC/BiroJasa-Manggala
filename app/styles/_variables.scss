@@ -1,0 +1,80 @@
+/* app/styles/_variables.scss */
+
+/* ===== CSS Variables (Design Tokens) ===== */
+:root {
+  /* Color System (Option A — Trust Teal + CTA Orange) */
+  --color-primary: #2a9d8f;
+  --color-primary-dark: #1f6f65;
+  --color-cta: #e76f51;
+  --color-cta-hover: #d65f43;
+
+  --color-bg: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-border: #e6e8ec;
+
+  --color-text: #373e48;
+  // --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* Layout */
+  --container-max: 120rem;
+  /* 1200px */
+  --container-pad: 1.6rem;
+
+  /* Radius */
+  --radius-sm: 0.8rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 1.6rem;
+
+  /* Shadow */
+  --shadow-sm: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 0.6rem 2.4rem rgba(15, 23, 42, 0.12);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 120ms;
+  --dur-2: 180ms;
+
+  /* Focus */
+  --focus-ring: 0 0 0 0.3rem rgba(42, 157, 143, 0.28);
+
+  /* Header height (for sticky nav offset) */
+  --header-h: 6.4rem;
+}
+
+/* ===== SCSS Variables (for calculations/mixins) ===== */
+$container-max: 120rem;
+$container-pad: 1.6rem;
+
+/* Spacing scale (rem, based on 10px = 1rem) */
+$space-1: 0.4rem;
+$space-2: 0.8rem;
+$space-3: 1.2rem;
+$space-4: 1.6rem;
+$space-5: 2.0rem;
+$space-6: 2.4rem;
+$space-7: 3.2rem;
+$space-8: 4.0rem;
+$space-9: 4.8rem;
+$space-10: 6.4rem;
+
+/* Z-index scale */
+$z-nav: 1000;
+$z-overlay: 1100;
+$z-modal: 1200;
+
+/* Breakpoints (mobile-first) */
+$bp-sm: 36rem;
+/* 360px */
+$bp-md: 48rem;
+/* 480px */
+$bp-lg: 64rem;
+/* 640px */
+$bp-xl: 80rem;
+/* 800px */
+$bp-2xl: 102.4rem;
+/* 1024px */

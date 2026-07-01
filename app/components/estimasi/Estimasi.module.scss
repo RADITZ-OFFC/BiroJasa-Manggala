@@ -1,0 +1,159 @@
+/* app/components/estimasi/Estimasi.module.scss */
+@use "../../styles/responsive" as r;
+
+.section {
+  background: linear-gradient(135deg,
+      rgba(42, 157, 143, 0.06) 0%,
+      rgba(247, 248, 250, 1) 55%,
+      rgba(231, 111, 81, 0.06) 100%);
+  border-bottom: 0.1rem solid var(--color-border);
+}
+
+.inner {
+  @include r.container;
+  padding-block: 2.8rem;
+
+  @include r.up(lg) {
+    padding-block: 3.8rem;
+  }
+}
+
+.header {
+  max-width: 84rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+
+  @include r.up(lg) {
+    font-size: 2.6rem;
+  }
+}
+
+.subtitle {
+  margin: 0.8rem 0 0 0;
+  font-size: 1.45rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.grid {
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 1.1rem;
+
+  @include r.up(md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include r.up(xl) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+
+  padding: 1.4rem;
+  border-radius: 2.0rem;
+
+  border: 0.1rem solid var(--color-border);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-sm);
+
+  transition: border-color var(--dur-2) var(--ease-out);
+
+  &:hover {
+    border-color: rgba(42, 157, 143, 0.30);
+  }
+}
+
+.icon {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 1.6rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.1rem solid var(--color-border);
+  background: rgba(231, 111, 81, 0.08);
+  color: var(--color-text);
+
+  flex: 0 0 auto;
+}
+
+.body {
+  min-width: 0;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 950;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.35rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.callout {
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+
+  padding: 1.5rem 1.5rem;
+  border-radius: 2.0rem;
+
+  border: 0.1rem solid rgba(231, 111, 81, 0.25);
+  background: rgba(231, 111, 81, 0.08);
+
+  @include r.down(sm) {
+    padding: 1.3rem;
+    border-radius: 1.8rem;
+  }
+}
+
+.calloutIcon {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 1.6rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.1rem solid rgba(231, 111, 81, 0.25);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--color-text);
+
+  flex: 0 0 auto;
+}
+
+.calloutBody {
+  min-width: 0;
+}
+
+.calloutTitle {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 950;
+}
+
+.calloutText {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
