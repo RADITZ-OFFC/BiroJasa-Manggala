@@ -17,7 +17,7 @@ export async function GET() {
   return NextResponse.json(data, {
     headers: {
       // cache 60 detik di browser, revalidate di background
-      "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
+      "Cache-Control": "public, s-maxage=10, stale-while-revalidate=30",
     },
   });
 }
