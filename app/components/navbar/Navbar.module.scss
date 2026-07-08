@@ -240,7 +240,8 @@
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: auto;
+  max-height: 100dvh;
   width: min(36rem, 88vw);
   background: var(--color-surface);
   border-left: 0.1rem solid var(--color-border);
@@ -250,7 +251,8 @@
   z-index: 1100;
   display: flex;
   flex-direction: column;
-  overflow: hidden; // Panel utama tidak boleh scroll
+  overflow-y: auto;
+  overflow-x: hidden;
 
   @include r.up(xl) {
     display: none;
@@ -262,7 +264,7 @@
 }
 
 .mobileHeader {
-  flex-shrink: 0; // Header tetap diam
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -285,14 +287,11 @@
 }
 
 .mobileBody {
-  flex: 1; // Mengambil sisa ruang
-  min-height: 0; // FIX: Wajib agar overflow: auto bekerja
+  flex: 0 0 auto;
   padding: 1.2rem 1.6rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  overflow-y: auto; // Hanya body yang scroll
-  -webkit-overflow-scrolling: touch;
 }
 
 .mobileLink {
@@ -333,8 +332,8 @@
 }
 
 .mobileSubOpen {
-  max-height: none; // Tidak dibatasi tinggi — konten expand penuh
-  overflow: visible; // Biarkan mobileBody yang scroll
+  max-height: none;
+  overflow: visible;
   opacity: 1;
   margin: 0.4rem 0 0.6rem;
 }
@@ -350,13 +349,9 @@
 }
 
 .mobileCtaWrap {
-  flex-shrink: 0; // Footer tetap diam di bawah
-  padding: 1.6rem;
+  padding: 1.6rem 1.6rem 2.4rem;
   border-top: 0.1rem solid var(--color-border);
-  background: var(--color-surface);
-  // Pastikan tombol CTA selalu terlihat di bagian bawah panel
-  position: sticky;
-  bottom: 0;
+  flex-shrink: 0;
 }
 
 .mobileCta {

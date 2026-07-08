@@ -223,7 +223,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className={`${styles.mobileLink} ${styles.mobileAccordionBtn} ${isActive("/layanan") ? styles.mobileActive : ""}`}
+            className={`${styles.mobileLink} ${isActive("/layanan") ? styles.mobileActive : ""}`}
             onClick={() => setMobileLayananOpen((v) => !v)}
             aria-expanded={mobileLayananOpen}
           >
